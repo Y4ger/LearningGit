@@ -3,16 +3,25 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
+// gulp.task('sass', function() {
+//   return gulp.src('./sassFiles/main.sass') // Gets all files ending with .sass in app/sass
+//     .pipe(sass({
+//           outputStyle: 'compressed',
+//           includePaths: ['node_modules/susy/sass']
+//       }).on('error', sass.logError))
+//     .pipe(gulp.dest('./'))
+//     .pipe(browserSync.reload({
+//       stream: true
+//     }))
+// });
+
 gulp.task('sass', function() {
-  return gulp.src('./sassFiles/main.sass') // Gets all files ending with .sass in app/sass
-    .pipe(sass({
+  return gulp.src('sassFiles/*.sass')
+      .pipe(sass({
           outputStyle: 'compressed',
           includePaths: ['node_modules/susy/sass']
       }).on('error', sass.logError))
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+      .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){

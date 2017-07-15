@@ -1,12 +1,36 @@
 @import "susy"
 
-
+$susy: (columns: 12, container: 750px, gutters: 1/4, global-box-sizing: border-box)
 
 body
-  +container(12)
+
+main
+  +container
   background-color: grey
 
-article
+nav
+  a
+    text-decoration: none
+    margin-left: gutter()
+  margin-bottom: gutter()
+
+header
   +span(4 of 12)
-  margin-left: gutter()
+  margin:
+    left: span(4 of 12)
+    bottom: gutter()
+article
+  +span(12)
   background-color: yellow
+
+
+aside
+  +span(4)
+  margin-left: span(4)+gutter(4)
+  li
+    list-style: none
+
+  margin-bottom: gutter()
+footer
+  +span(8)
+  margin-left: span(2)+gutter(8)*2

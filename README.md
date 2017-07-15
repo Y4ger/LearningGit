@@ -15,6 +15,8 @@ Key words/concepts:
     pull: Fetch from and integrate with another repository or a local branch
     fetch: Download objects and refs from another repository
     status: shows the current tree status (if branch is up to date, what files are not on staging, what files have been modified since last commit)
+      -uno: tells you if your current branch is up to date with remote, if no response you are up to date
+      [git status [-uno] ]
 
     add: adds a file to the current staging so that it can be committed
       [git add {file name}]

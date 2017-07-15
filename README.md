@@ -28,7 +28,8 @@ Key words/concepts:
       --amend: redue a commit, uses the current staging environment as blob/snapshot
       [git commit [-am] "commit message"]
     push: updates the remote repository with current HEAD's commit
-
+      {local branch}:{remote branch}: this pushes the changes made on a local branch to a remote branch
+      [git push {remote repository name} [{local branch}:{remote branch}]]
     branch: using just this command shows all existing branches
       "branch name": is this names is not in use, creates a new branch from the current branch
       -d: deletes the branch you refer to

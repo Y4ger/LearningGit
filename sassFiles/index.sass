@@ -1,5 +1,12 @@
+@import "susy"
+
+
+
 body
+  +container(12)
   background-color: grey
 
 article
-  color: yellow
+  +span(4 of 12)
+  margin-left: gutter()
+  background-color: yellow

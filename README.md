@@ -28,11 +28,11 @@ Key words/concepts:
       --amend: redue a commit, uses the current staging environment as blob/snapshot
       [git commit [-am] "commit message"]
     push: updates the remote repository with current HEAD's commit
-    branch: shows all branches available
 
     branch: using just this command shows all existing branches
       "branch name": is this names is not in use, creates a new branch from the current branch
-      [git branch "name of branch"]
+      -d: deletes the branch you refer to
+      [git branch [-d] "name of branch"]
     checkout: change between local branches
       -b: creates a new branch and moves to it
       [git checkout [-b] {branch name}]

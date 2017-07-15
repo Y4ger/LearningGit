@@ -1,10 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
-  return gulp.src('./sass/main.sass') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
+  return gulp.src('./sass/main.sass') // Gets all files ending with .sass in app/sass
+    .pipe(sass({
+          outputStyle: 'compressed',
+          includePaths: ['node_modules/susy/sass']
+      }).on('error', sass.logError))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.reload({
       stream: true

@@ -1,39 +1,80 @@
 @import "susy"
 
-$susy: (columns: 12, container: 750px, gutters: 1/4, global-box-sizing: border-box)
+$susy: (columns: 12, column-width: 93.75px, container: 1400px, gutters: 1/4, global-box-sizing: border-box, debug: (image: show))
 // The following are mian colors I will use to design the site
 $clr-0: #DED3D4
 $clr-1: #FBBC90
 $clr-2: #A4BC82
 $clr-3: #9B2E33
+//Fonts
+$titles: 'Great Vibes', cursive
 
 main
   +container
-  background-color: grey
-
+  height: 1440px
 nav
+  margin-bottom: gutter()
+  margin-top: gutter()
   a
+    color: $clr-3
     text-decoration: none
     margin-left: gutter()
-  margin-bottom: gutter()
+
+.main-view
+  +span(12)
+  // background-color: $clr-0
+  padding-top: gutter()
 
 header
-  +span(4 of 12)
-  margin:
-    left: span(4 of 12)
-    bottom: gutter()
-article
-  +span(12)
-  background-color: yellow
+  +span(6)
+  background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/14963210_10207486372302390_8494601562067729117_n.jpg?oh=290cc61f77c14356bd2991bba97dd35d&oe=5A0B8037")
+  background-size: cover
+  background-position: center top 45%
+  height: 600px
+  margin-left: span(3) + gutter()
+  margin-bottom: gutter()
+  border-radius: 20px
+  text-align: center
+  box-shadow: 2px 2px 4px grey
+  p
+    font-size: 100px
+    letter-spacing: 15px
+    font-family: $titles
+    color: $clr-3
+    // opacity: .75
+    margin-bottom: gutter()
+    margin-top: 475px
 
+article
+  +span(8)
+  box-shadow: 2px 2px 4px grey
+  // background-color: $clr-2
+  margin:
+    left: span(2) + gutter()
+    right: span(2) + gutter()
 
 aside
-  +span(4)
-  margin-left: span(4)+gutter(4)
+  background-color: $clr-0
+  h3
+    text-align: center
   li
     list-style: none
 
-  margin-bottom: gutter()
 footer
-  +span(8)
-  margin-left: span(2)+gutter(8)*2
+  background-color: $clr-2
+
+.four-center
+  +span(4)
+  margin-left: span(4 of 12) + gutter()
+  margin-bottom: gutter()
+  margin-top: gutter()
+
+@media screen and (max-width: 750px)
+  header
+    background-position: center top
+    height: 200px
+    p
+      letter-spacing: normal
+      font-size: 30px
+      text-align: center
+      margin-top: 15px

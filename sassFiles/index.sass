@@ -1,17 +1,22 @@
 @import "susy"
 
-$susy: (columns: 12, column-width: 93.75px, container: 1400px, gutters: 1/4, global-box-sizing: border-box)
+$susy: (columns: 12, column-width: 21.82px, container: 1000px, gutters: 1/4, global-box-sizing: border-box)
 // The following are mian colors I will use to design the site
-$clr-0: #DED3D4
-$clr-1: #FBBC90
-$clr-2: #A4BC82
-$clr-3: #9B2E33
+$clr-0: #AA7D5E
+$clr-1: #F2F2F2
+$clr-2: #709667
+$clr-3: #50716A
+
 //Fonts
 $initials: 'Great Vibes', cursive
 $titles: 'Oleo Script', cursive
 
 body
-  background-color: #E3E1DC
+  background-image: url("http://www.freephototextures.com/images/textures/wood/36.jpg")
+  background-size: 1500px 800px
+  background-position-y: 1px
+  background-attachment: fixed
+  background-color: $clr-1
 main
   +container
   height: 1440px
@@ -20,7 +25,7 @@ nav
   margin-top: gutter()
   margin-left: gutter()
   a
-    color: #8D494C
+    color: $clr-2
     font-size: 25px
     font-family: $titles
     text-decoration: none
@@ -29,42 +34,33 @@ nav
       left: 5px
       right: 5px
   a:hover
-    color: $clr-0
+    color: $clr-1
     border-radius: 10px
-    background-color: #8D494C
-
+    background-color: $clr-2
 
 .main-view
-  +span(12)
-  // padding-top: gutter()
-  border: 1px  solid #8D494C
-  // box-shadow: 4px 4px 8px #8D494C
+  border: 1px  solid $clr-0
 
 header
-  // +span(6)
   background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/14939982_10207486137576522_6833689799501846087_o.jpg?oh=3ace83989909559436500a461b30df68&oe=59FA9256")
   background-size: 1400px
   background-position: center top
   background-attachment: fixed
-  height: 700px
-  filter: grayscale(50%)
-  // margin-left: span(3) + gutter()
-  // border-radius: 60px
+  height: 600px
   text-align: center
-  // box-shadow: 2px 2px 4px grey
+
   p
-    filter: brightness(125%)
     font-size: 300px
     letter-spacing: 15px
     font-family: $initials
-    color: white
+    color: $clr-1
     margin: 0px
     padding-top: 120px
 
 article
-
-  // background-color: $clr-2
-  background-color: #8D494C
+  background-color: $clr-2
+  background-size: 1200px
+  color: $clr-1
   font-family: $titles
   font-size: 20px
   padding:
@@ -76,19 +72,15 @@ article
 aside
   clear: both
   background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/17966375_10213297162283773_8251644271423058536_o.jpg?oh=0d1ce441faf15d21b824ab8c36d24681&oe=59F394E4")
-  background-size: 2500px
-  background-position: center top -200%
+  background-size: 1800px
+  background-position: 65% 20%
   background-attachment: fixed
-  height: 700px
-  width: 1400
-  filter: grayscale(50%)
+  height: 600px
   text-align: center
   font-family: $initials
-  padding-top: gutter(12)
-  color: white
-  // text-shadow: (-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000)
+  padding-top: 10px
+  color: $clr-1
   h3
-    padding-top: 40px
     letter-spacing: 5px
     font-size: 70px
     filter: brightness(125%)
@@ -96,62 +88,51 @@ aside
     filter: brightness(125%)
     text-align: center
     list-style: none
-    margin: 30px
+    margin: 20px
     font-size: 50px
     font-weight: bold
     letter-spacing: 4px
   ul
     padding-left: 0px
 
-.four-center
-  +span(4)
-  margin-left: span(4 of 12) + gutter()
-  margin-bottom: gutter()
-  margin-top: gutter()
-
 footer
   text-align: center
 
-@media screen and (max-width: 768px)
+@media only screen and (max-device-width: 1023px)
   body
-    width: 100%
-  main
-    width: 100%
-  nav
-    width: 100%
-  header
-    background-position: center top
-    height: 200px
-    p
-      letter-spacing: normal
-      font-size: 30px
-      text-align: center
-      margin-top: 15px
-  article
-    width: 100%
-  aside
-    width: 100%
-  footer
-    width: 100%
+    margin: 0px
 
-@media screen and (max-width: 768px)
-  body
-    width: 100%
-  main
-    width: 100%
-  nav
-    width: 100%
   header
-    background-position: center top
-    height: 200px
+    background-position: 50% top
+    background-size: 800px
+    height: 350px
     p
-      letter-spacing: normal
-      font-size: 30px
-      text-align: center
-      margin-top: 15px
+      font-size: 150px
+      padding-top: 80px
+
   article
-    width: 100%
+    padding: 25px
+    p
+      color: white
+
   aside
-    width: 100%
-  footer
-    width: 100%
+    background-size: 1200px
+    background-position: 60% top
+    height: 500px
+    // text-shadow: (-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000)
+    h3
+      font-size: 60px
+    li
+      font-size: 35px
+@media only screen and (max-device-width: 426px)
+  aside
+    background-position-y: -320px
+
+
+@media only screen and (max-device-width: 376px)
+  aside
+    background-position-y: -250px
+
+@media only screen and (max-device-width: 321px)
+  aside
+    background-position-y:  -30px

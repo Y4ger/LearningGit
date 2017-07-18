@@ -1,67 +1,107 @@
 @import "susy"
 
-$susy: (columns: 12, column-width: 93.75px, container: 1400px, gutters: 1/4, global-box-sizing: border-box, debug: (image: show))
+$susy: (columns: 12, column-width: 93.75px, container: 1400px, gutters: 1/4, global-box-sizing: border-box)
 // The following are mian colors I will use to design the site
 $clr-0: #DED3D4
 $clr-1: #FBBC90
 $clr-2: #A4BC82
 $clr-3: #9B2E33
 //Fonts
-$titles: 'Great Vibes', cursive
+$initials: 'Great Vibes', cursive
+$titles: 'Oleo Script', cursive
 
+body
+  background-color: #E3E1DC
 main
   +container
   height: 1440px
 nav
   margin-bottom: gutter()
   margin-top: gutter()
+  margin-left: gutter()
   a
-    color: $clr-3
+    color: #8D494C
+    font-size: 25px
+    font-family: $titles
     text-decoration: none
-    margin-left: gutter()
+    margin: gutter()/2
+    padding:
+      left: 5px
+      right: 5px
+  a:hover
+    color: $clr-0
+    border-radius: 10px
+    background-color: #8D494C
+
 
 .main-view
   +span(12)
-  // background-color: $clr-0
-  padding-top: gutter()
+  // padding-top: gutter()
+  border: 1px  solid #8D494C
+  // box-shadow: 4px 4px 8px #8D494C
 
 header
-  +span(6)
-  background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/14963210_10207486372302390_8494601562067729117_n.jpg?oh=290cc61f77c14356bd2991bba97dd35d&oe=5A0B8037")
-  background-size: cover
-  background-position: center top 45%
-  height: 600px
-  margin-left: span(3) + gutter()
-  margin-bottom: gutter()
-  border-radius: 20px
+  // +span(6)
+  background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/14939982_10207486137576522_6833689799501846087_o.jpg?oh=3ace83989909559436500a461b30df68&oe=59FA9256")
+  background-size: 1400px
+  background-position: center top
+  background-attachment: fixed
+  height: 700px
+  filter: grayscale(50%)
+  // margin-left: span(3) + gutter()
+  // border-radius: 60px
   text-align: center
-  box-shadow: 2px 2px 4px grey
+  // box-shadow: 2px 2px 4px grey
   p
-    font-size: 100px
+    filter: brightness(125%)
+    font-size: 300px
     letter-spacing: 15px
-    font-family: $titles
-    color: $clr-3
-    // opacity: .75
-    margin-bottom: gutter()
-    margin-top: 475px
+    font-family: $initials
+    color: white
+    margin: 0px
+    padding-top: 120px
 
 article
-  +span(8)
-  box-shadow: 2px 2px 4px grey
+
   // background-color: $clr-2
-  margin:
-    left: span(2) + gutter()
-    right: span(2) + gutter()
+  background-color: #8D494C
+  font-family: $titles
+  font-size: 20px
+  padding:
+    left: span(1) + gutter()
+    right: span(1) + gutter(12.01)
+    bottom: gutter()
+    top: gutter()
 
 aside
-  background-color: $clr-0
+  clear: both
+  background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/17966375_10213297162283773_8251644271423058536_o.jpg?oh=0d1ce441faf15d21b824ab8c36d24681&oe=59F394E4")
+  background-size: 2500px
+  background-position: center top -200%
+  background-attachment: fixed
+  height: 700px
+  width: 1400
+  filter: grayscale(50%)
+  text-align: center
+  font-family: $initials
+  padding-top: gutter(12)
+  color: white
+  // text-shadow: (-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000)
   h3
-    text-align: center
+    padding-top: 40px
+    letter-spacing: 5px
+    font-size: 70px
+    filter: brightness(125%)
   li
+    filter: brightness(125%)
+    text-align: center
     list-style: none
-
-footer
-  background-color: $clr-2
+    margin: 30px
+    font-size: 50px
+    font-weight: bold
+    letter-spacing: 4px
+  ul
+    padding-left: 0px
 
 .four-center
   +span(4)
@@ -69,7 +109,16 @@ footer
   margin-bottom: gutter()
   margin-top: gutter()
 
-@media screen and (max-width: 750px)
+footer
+  text-align: center
+
+@media screen and (max-width: 768px)
+  body
+    width: 100%
+  main
+    width: 100%
+  nav
+    width: 100%
   header
     background-position: center top
     height: 200px
@@ -78,3 +127,31 @@ footer
       font-size: 30px
       text-align: center
       margin-top: 15px
+  article
+    width: 100%
+  aside
+    width: 100%
+  footer
+    width: 100%
+
+@media screen and (max-width: 768px)
+  body
+    width: 100%
+  main
+    width: 100%
+  nav
+    width: 100%
+  header
+    background-position: center top
+    height: 200px
+    p
+      letter-spacing: normal
+      font-size: 30px
+      text-align: center
+      margin-top: 15px
+  article
+    width: 100%
+  aside
+    width: 100%
+  footer
+    width: 100%

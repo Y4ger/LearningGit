@@ -1,36 +1,138 @@
 @import "susy"
 
-$susy: (columns: 12, container: 750px, gutters: 1/4, global-box-sizing: border-box)
+$susy: (columns: 12, column-width: 21.82px, container: 1000px, gutters: 1/4, global-box-sizing: border-box)
+// The following are mian colors I will use to design the site
+$clr-0: #AA7D5E
+$clr-1: #F2F2F2
+$clr-2: #709667
+$clr-3: #50716A
+
+//Fonts
+$initials: 'Great Vibes', cursive
+$titles: 'Oleo Script', cursive
 
 body
-
+  background-image: url("http://www.freephototextures.com/images/textures/wood/36.jpg")
+  background-size: 1500px 800px
+  background-position-y: 1px
+  background-attachment: fixed
+  background-color: $clr-1
 main
   +container
-  background-color: grey
-
+  height: 1440px
 nav
-  a
-    text-decoration: none
-    margin-left: gutter()
   margin-bottom: gutter()
+  margin-top: gutter()
+  margin-left: gutter()
+  a
+    color: $clr-2
+    font-size: 25px
+    font-family: $titles
+    text-decoration: none
+    margin: gutter()/2
+    padding:
+      left: 5px
+      right: 5px
+  a:hover
+    color: $clr-1
+    border-radius: 10px
+    background-color: $clr-2
+
+.main-view
+  border: 1px  solid $clr-0
 
 header
-  +span(4 of 12)
-  margin:
-    left: span(4 of 12)
-    bottom: gutter()
-article
-  +span(12)
-  background-color: yellow
+  background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/14939982_10207486137576522_6833689799501846087_o.jpg?oh=3ace83989909559436500a461b30df68&oe=59FA9256")
+  background-size: 1400px
+  background-position: center top
+  background-attachment: fixed
+  height: 600px
+  text-align: center
 
+  p
+    font-size: 300px
+    letter-spacing: 15px
+    font-family: $initials
+    color: $clr-1
+    margin: 0px
+    padding-top: 120px
+
+article
+  background-color: $clr-2
+  background-size: 1200px
+  color: $clr-1
+  font-family: $titles
+  font-size: 20px
+  padding:
+    left: span(1) + gutter()
+    right: span(1) + gutter(12.01)
+    bottom: gutter()
+    top: gutter()
 
 aside
-  +span(4)
-  margin-left: span(4)+gutter(4)
+  clear: both
+  background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/17966375_10213297162283773_8251644271423058536_o.jpg?oh=0d1ce441faf15d21b824ab8c36d24681&oe=59F394E4")
+  background-size: 1800px
+  background-position: 65% 20%
+  background-attachment: fixed
+  height: 600px
+  text-align: center
+  font-family: $initials
+  padding-top: 10px
+  color: $clr-1
+  h3
+    letter-spacing: 5px
+    font-size: 70px
+    filter: brightness(125%)
   li
+    filter: brightness(125%)
+    text-align: center
     list-style: none
+    margin: 20px
+    font-size: 50px
+    font-weight: bold
+    letter-spacing: 4px
+  ul
+    padding-left: 0px
 
-  margin-bottom: gutter()
 footer
-  +span(8)
-  margin-left: span(2)+gutter(8)*2
+  text-align: center
+
+@media only screen and (max-device-width: 1023px)
+  body
+    margin: 0px
+
+  header
+    background-position: 50% top
+    background-size: 800px
+    height: 350px
+    p
+      font-size: 150px
+      padding-top: 80px
+
+  article
+    padding: 25px
+    p
+      color: white
+
+  aside
+    background-size: 1200px
+    background-position: 60% top
+    height: 500px
+    // text-shadow: (-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000)
+    h3
+      font-size: 60px
+    li
+      font-size: 35px
+@media only screen and (max-device-width: 426px)
+  aside
+    background-position-y: -320px
+
+
+@media only screen and (max-device-width: 376px)
+  aside
+    background-position-y: -250px
+
+@media only screen and (max-device-width: 321px)
+  aside
+    background-position-y:  -30px

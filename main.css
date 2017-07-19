@@ -6,8 +6,12 @@ body {
   background-color: #F2F2F2;
 }
 
+.small_display {
+  display: none;
+}
+
 main {
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   height: 1440px;
@@ -39,10 +43,6 @@ nav a:hover {
   color: #F2F2F2;
   border-radius: 10px;
   background-color: #709667;
-}
-
-.main-view {
-  border: 1px solid #AA7D5E;
 }
 
 header {
@@ -110,9 +110,10 @@ aside ul {
 
 footer {
   text-align: center;
+  padding: 1.69492%;
 }
 
-@media only screen and (max-device-width: 1023px) {
+@media only screen and (max-width: 1200px) {
   body {
     margin: 0px;
   }
@@ -144,20 +145,48 @@ footer {
   }
 }
 
-@media only screen and (max-device-width: 426px) {
+@media only screen and (max-width: 513px) and (min-width: 367px) {
+  header {
+    background-position: 60% top;
+    height: 200px;
+  }
+  header p {
+    font-size: 90px;
+    padding-top: 50px;
+  }
   aside {
-    background-position-y: -320px;
+    background-size: 1010px;
+    background-position: 55% bottom;
+    height: 450px;
+  }
+  aside h3 {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+  aside li {
+    font-size: 20px;
+  }
+  main {
+    height: auto;
+  }
+  .small_hide {
+    display: none;
   }
 }
 
-@media only screen and (max-device-width: 376px) {
-  aside {
-    background-position-y: -250px;
+@media screen and (max-width: 366px) and (min-width: 15px) {
+  main {
+    display: none;
+    height: auto;
   }
-}
-
-@media only screen and (max-device-width: 321px) {
-  aside {
-    background-position-y: -30px;
+  .small_display {
+    display: block;
+  }
+  .small_display h1 {
+    color: white;
+    text-align: left;
+    font-family: "Great Vibes", cursive;
+    padding: 10px;
   }
 }

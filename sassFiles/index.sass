@@ -1,6 +1,6 @@
 @import "susy"
 
-$susy: (columns: 12, column-width: 21.82px, container: 1000px, gutters: 1/4, global-box-sizing: border-box)
+$susy: (columns: 12, column-width: 21.82px, container: 1200px, gutters: 1/4, global-box-sizing: border-box)
 // The following are mian colors I will use to design the site
 $clr-0: #AA7D5E
 $clr-1: #F2F2F2
@@ -17,6 +17,10 @@ body
   background-position-y: 1px
   background-attachment: fixed
   background-color: $clr-1
+
+.small_display
+  display: none
+
 main
   +container
   height: 1440px
@@ -37,9 +41,6 @@ nav
     color: $clr-1
     border-radius: 10px
     background-color: $clr-2
-
-.main-view
-  border: 1px  solid $clr-0
 
 header
   background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/14939982_10207486137576522_6833689799501846087_o.jpg?oh=3ace83989909559436500a461b30df68&oe=59FA9256")
@@ -97,8 +98,9 @@ aside
 
 footer
   text-align: center
+  padding: gutter()
 
-@media only screen and (max-device-width: 1023px)
+@media only screen and (max-width: 1200px)
   body
     margin: 0px
 
@@ -124,15 +126,40 @@ footer
       font-size: 60px
     li
       font-size: 35px
-@media only screen and (max-device-width: 426px)
-  aside
-    background-position-y: -320px
 
-
-@media only screen and (max-device-width: 376px)
+@media only screen and (max-width: 513px) and (min-width: 367px)
+  header
+    background-position: 60% top
+    height: 200px
+    p
+      font-size: 90px
+      padding-top: 50px
   aside
-    background-position-y: -250px
+    background-size: 1010px
+    background-position: 55% bottom
+    height: 450px
+    h3
+      margin-top: 70px
+      margin-bottom: 50px
+      font-size: 40px
+    li
+      font-size: 20px
 
-@media only screen and (max-device-width: 321px)
-  aside
-    background-position-y:  -30px
+  main
+    height: auto
+
+  .small_hide
+    display: none
+
+@media screen and (max-width: 366px) and (min-width: 15px)
+  main
+    display: none
+    height: auto
+
+  .small_display
+    display: block
+    h1
+      color: white
+      text-align: left
+      font-family: $initials
+      padding: 10px

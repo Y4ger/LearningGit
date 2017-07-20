@@ -1,5 +1,4 @@
 @import "susy"
-
 $susy: (columns: 12, column-width: 21.82px, container: 1200px, gutters: 1/4, global-box-sizing: border-box)
 // The following are mian colors I will use to design the site
 $clr-0: #AA7D5E
@@ -16,6 +15,7 @@ body
   background-size: 1500px 800px
   background-position-y: 1px
   background-attachment: fixed
+  background-repeat: no-repeat
   background-color: $clr-1
 
 .small_display
@@ -89,10 +89,20 @@ aside
     filter: brightness(125%)
     text-align: center
     list-style: none
-    margin: 20px
+    margin: 2px
     font-size: 50px
     font-weight: bold
     letter-spacing: 4px
+    line-height: 150%
+  a
+    color: inherit
+    text-decoration: none
+    border-bottom: 2px $clr-1 solid
+
+  a:hover
+    color: #797979
+    border-color: #797979
+
   ul
     padding-left: 0px
 

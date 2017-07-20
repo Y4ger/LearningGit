@@ -31,8 +31,34 @@ $susy: (columns: 12, column-width: 21.82px, container: 1200px, gutters: 1/4, glo
     .columns7-12
       @extend .columns1-6
       padding-left: gutter()
-
   aside
     background-image: url("https://scontent.xx.fbcdn.net/v/t1.0-9/600952_10151490780042798_437199091_n.jpg?oh=d08a4996aaa1b650f17bbfb82dbad091&oe=59F66401")
     background-size: 1202px
     background-position: center -100px
+@media only screen and (max-width: 1200px)
+  .reception
+    header
+      p
+        font-size: 100px
+@media only screen and (max-width: 513px)
+  .reception
+    header
+      background-size: 900px
+      background-position: center top
+      p
+        font-size: 50px
+    article
+      .columns1-6
+        +span(12)
+        margin: 0px
+    aside
+      background-size: 700px
+      background-position: center bottom
+      height: 300px
+      h3
+        margin-top: 50px
+@media screen and (max-width: 386px) and (min-width: 15px)
+  .reception
+    header
+      p
+        font-size: 40px

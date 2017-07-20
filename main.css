@@ -253,3 +253,40 @@ footer {
   background-size: 1202px;
   background-position: center -100px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .reception header p {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 513px) {
+  .reception header {
+    background-size: 900px;
+    background-position: center top;
+  }
+  .reception header p {
+    font-size: 50px;
+  }
+  .reception article .columns1-6, .reception article .columns7-12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0px;
+  }
+  .reception aside {
+    background-size: 700px;
+    background-position: center bottom;
+    height: 300px;
+  }
+  .reception aside h3 {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 386px) and (min-width: 15px) {
+  .reception header p {
+    font-size: 40px;
+  }
+}
